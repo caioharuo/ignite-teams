@@ -5,9 +5,9 @@ import {
 } from '@expo-google-fonts/roboto';
 import { ThemeProvider } from 'styled-components';
 
-import { Loading } from '@components/Loading';
-import Groups from '@screens/Groups';
 import theme from './src/theme';
+import { NewGroup } from '@screens/NewGroup';
+import { Loading } from '@components/Loading';
 import { StatusBar } from 'react-native';
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   );
 }
